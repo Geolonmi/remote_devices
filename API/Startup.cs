@@ -1,23 +1,22 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using rmteapi.Models;
 
 namespace remote_devices
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private IHostEnvironment _environment;
+
+        public Startup(IConfiguration configuration, IHostEnvironment environment)
         {
             Configuration = configuration;
+            _environment = environment;
         }
 
         public IConfiguration Configuration { get; }
@@ -26,6 +25,14 @@ namespace remote_devices
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            string connectionString = _environment.IsDevelopment() ? 
+                "host=localhost;port=5432;database=remote_devices;username=remote_devices_user;password=remote_devices_pw" :
+                Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
+
+            services.AddDbContext<ApiDbContext>(options =>
+                options.UseNpgsql(connectionString)
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
