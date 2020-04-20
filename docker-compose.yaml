@@ -1,0 +1,38 @@
+version: '3.4'
+
+networks:
+  remote_devices_api-dev:
+    driver: bridge 
+
+services:
+  remote_devices_api:
+    image: remote_devices_api:latest
+    depends_on:
+      - "postgres_image"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"     
+    environment:
+      DOCKERIZED: "1"
+      DB_CONNECTION_STRING: "host=postgres_image;port=5432;database=remote_devices;username=remote_devices_user;password=remote_devices_pw"
+    networks:
+      - remote_devices_api-dev  
+  
+  postgres_image:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - db_volume:/var/lib/postgresql/data
+      - ./API/Sql/Init.sql:/docker-entrypoint-initdb.d/Init.sql
+    environment:
+      POSTGRES_USER: "remote_devices_user"
+      POSTGRES_PASSWORD: "remote_devices_pw"
+      POSTGRES_DB: "remote_devices"
+    networks:
+      - remote_devices_api-dev
+volumes:
+  db_volume:
