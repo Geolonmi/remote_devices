@@ -1,0 +1,12 @@
+.vscode/
+API/obj/
+API/bin/
+API/.vscode/
+API/.vs/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
