@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using rmteapi.Models;
+using remote_device_api.Models;
 
-namespace remote_devices
+namespace remote_device_api
 {
     public class Startup
     {

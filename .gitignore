@@ -1,8 +1,8 @@
 .vscode/
-API/obj/
-API/bin/
-API/.vscode/
-API/.vs/
+ENDPOINT/remote_device_api/obj/
+ENDPOINT/remote_device_api/bin/
+ENDPOINT/remote_device_api/.vscode/
+ENDPOINT/remote_device_api/.vs/
 
 # User-specific files
 *.rsuser

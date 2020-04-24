@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>remote_device</AssemblyName>
+    <RootNamespace>remote_device</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

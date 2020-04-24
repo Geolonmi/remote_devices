@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 
-namespace remote_devices
+namespace remote_device_api
 {
     public class WeatherForecast
     {

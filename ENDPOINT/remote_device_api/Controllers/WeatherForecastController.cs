@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace remote_devices.Controllers
+namespace remote_device_api.Controllers
 {
     [ApiController]
     [Route("[controller]")]

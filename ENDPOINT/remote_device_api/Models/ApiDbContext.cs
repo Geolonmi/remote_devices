@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using rmteapi.Maps;
+using remote_device_api.Maps;
 
-namespace rmteapi.Models{
+namespace remote_device_api.Models{
     public class ApiDbContext : DbContext
     {
         public ApiDbContext(DbContextOptions<ApiDbContext> options) : base(options)
