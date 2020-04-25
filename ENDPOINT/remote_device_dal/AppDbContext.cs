@@ -1,17 +1,19 @@
 using Microsoft.EntityFrameworkCore;
-using remote_device_api.Maps;
+using remote_device_dal.Maps;
+using remote_device_dal.Models;
 
-namespace remote_device_api.Models{
-    public class ApiDbContext : DbContext
+namespace remote_device_dal{
+
+    public class AppDbContext : DbContext
     {
-        public ApiDbContext(DbContextOptions<ApiDbContext> options) : base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
 
         }
 
         public DbSet<RemoteDevice> RemoteDevices { get; set; }
         public DbSet<LedStrip> LedStrips { get; set; }
- 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace remote_device_api.Models
+namespace remote_device_dal.Models
 {
     public abstract class RemoteDevice
     {

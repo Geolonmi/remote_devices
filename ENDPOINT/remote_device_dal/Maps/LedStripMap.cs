@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using remote_device_api.Models;
+using remote_device_dal.Models;
 
-namespace remote_device_api.Maps
+namespace remote_device_dal.Maps
 {
     public class LedStripMap
     {

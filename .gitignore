@@ -1,10 +1,15 @@
-.vscode/
+# Projects specific files
 ENDPOINT/remote_device_api/obj/
 ENDPOINT/remote_device_api/bin/
-ENDPOINT/remote_device_api/.vscode/
-ENDPOINT/remote_device_api/.vs/
+
+ENDPOINT/remote_device_dal/obj/
+ENDPOINT/remote_device_dal/bin/
 
 # User-specific files
+ENDPOINT/remote_device_api/.vscode/
+ENDPOINT/remote_device_api/.vs/
+ENDPOINT/.vs/
+.vscode/
 *.rsuser
 *.suo
 *.user
