@@ -4,6 +4,8 @@
     name           VARCHAR(50)  NOT NULL,
     hostname       VARCHAR(100) NOT NULL,
     device_type    VARCHAR(30)  NOT NULL DEFAULT 'LedStrip',
-    min_brightness integer,
-    max_brightness integer
+    min_brightness INTEGER,
+    max_brightness INTEGER,
+    created_at     TIMESTAMP,
+    updated_at     TIMESTAMP
 );

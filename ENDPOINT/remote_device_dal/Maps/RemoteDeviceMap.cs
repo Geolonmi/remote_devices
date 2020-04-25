@@ -4,20 +4,24 @@ using remote_device_services.Models;
 
 namespace remote_device_dal.Maps
 {
-    public class RemoteDeviceMap
+    public class RemoteDeviceMap : BaseEntityMap<RemoteDevice>
     {
         public RemoteDeviceMap(EntityTypeBuilder<RemoteDevice> entityBuilder)
         {
-            entityBuilder.HasKey(x => x.Id);
+            base.Configure(entityBuilder);
 
             entityBuilder.ToTable("remote_devices");
 
             entityBuilder.HasDiscriminator<string>("device_type")
                 .HasValue<LedStrip>(nameof(LedStrip));
 
-            entityBuilder.Property(x => x.Id).HasColumnName("id");
-            entityBuilder.Property(x => x.Name).HasColumnName("name");
-            entityBuilder.Property(x => x.HostName).HasColumnName("hostname");
+            entityBuilder.Property(x => x.Name)
+                .HasColumnName("name")
+                .HasMaxLength(50);
+
+            entityBuilder.Property(x => x.HostName)
+                .HasColumnName("hostname")
+                .HasMaxLength(100);
         }
     }
 }

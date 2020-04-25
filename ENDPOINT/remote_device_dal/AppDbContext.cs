@@ -6,11 +6,7 @@ namespace remote_device_dal{
 
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        {
-
-        }
-
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<RemoteDevice> RemoteDevices { get; set; }
         public DbSet<LedStrip> LedStrips { get; set; }
 
