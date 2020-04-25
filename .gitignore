@@ -5,6 +5,9 @@ ENDPOINT/remote_device_api/bin/
 ENDPOINT/remote_device_dal/obj/
 ENDPOINT/remote_device_dal/bin/
 
+ENDPOINT/remote_device_services/obj/
+ENDPOINT/remote_device_services/bin/
+
 # User-specific files
 ENDPOINT/remote_device_api/.vscode/
 ENDPOINT/remote_device_api/.vs/

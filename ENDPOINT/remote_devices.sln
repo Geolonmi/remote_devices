@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "remote_device", "remote_device_api\remote_device.csproj", "{08B5100F-0F4D-4866-B5E6-D7F5AC3386FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "remote_device_dal", "remote_device_dal\remote_device_dal.csproj", "{C748C273-8421-49D1-8793-CA9827547EB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "remote_device_dal", "remote_device_dal\remote_device_dal.csproj", "{C748C273-8421-49D1-8793-CA9827547EB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "remote_device_services", "remote_device_services\remote_device_services.csproj", "{D0F8DC01-DA71-4DFC-8C8E-1E3268746C47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C748C273-8421-49D1-8793-CA9827547EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C748C273-8421-49D1-8793-CA9827547EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C748C273-8421-49D1-8793-CA9827547EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0F8DC01-DA71-4DFC-8C8E-1E3268746C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0F8DC01-DA71-4DFC-8C8E-1E3268746C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0F8DC01-DA71-4DFC-8C8E-1E3268746C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0F8DC01-DA71-4DFC-8C8E-1E3268746C47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

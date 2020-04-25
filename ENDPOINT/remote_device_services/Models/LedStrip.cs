@@ -1,4 +1,4 @@
-﻿namespace remote_device_dal.Models
+﻿namespace remote_device_services.Models
 {
     public class LedStrip : RemoteDevice
     {
