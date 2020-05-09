@@ -13,9 +13,17 @@
     "webpack-dev-server": "^3.8.2"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "antd": "^4.2.0",
+    "css-loader": "^3.5.3",
     "mobx": "^5.14.2",
     "mobx-react": "^6.1.4",
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "style-loader": "^1.2.1",
+    "react-scripts": "3.4.1",
+    "moment": "2.24.0"
   }
 }

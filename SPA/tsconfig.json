@@ -8,8 +8,5 @@
     "lib": ["dom", "es2015"],
     "esModuleInterop": true
   },
-  "exclude": [
-    "node_modules",
-    "static"
-  ]
+  "exclude": ["node_modules", "static"]
 }
