@@ -8,6 +8,11 @@ ENDPOINT/remote_device_dal/bin/
 ENDPOINT/remote_device_services/obj/
 ENDPOINT/remote_device_services/bin/
 
+ENDPOINT/remote_device_data/obj/
+ENDPOINT/remote_device_data/bin/
+
+ENDPOINT/remote_device_api/wwwroot/js/index.js
+
 # User-specific files
 ENDPOINT/remote_device_api/.vscode/
 ENDPOINT/remote_device_api/.vs/

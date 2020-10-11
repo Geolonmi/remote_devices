@@ -10,5 +10,9 @@
     <ProjectReference Include="..\remote_device_dal\remote_device_dal.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\js\" />
+  </ItemGroup>
+
 
 </Project>

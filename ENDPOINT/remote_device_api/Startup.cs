@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using remote_device_dal;
 
+
 namespace remote_device_api
 {
     public class Startup
@@ -30,7 +31,15 @@ namespace remote_device_api
                 "host=localhost;port=5432;database=remote_devices;username=remote_devices_user;password=remote_devices_pw" :
                 Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
 
-            services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
+            services
+                .AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString))
+                .AddScoped<IDevicesDal, DevicesDal>()
+                .AddMvc()
+                    .AddJsonOptions(j => j.JsonSerializerOptions.IgnoreNullValues = true)
+                    .AddRazorPagesOptions(options =>
+                    {
+                        options.Conventions.AllowAnonymousToPage("/Index");
+                    });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,13 +52,16 @@ namespace remote_device_api
 
             app.UseHttpsRedirection();
 
+            app.UseStaticFiles();
+
             app.UseRouting();
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
+            app.UseEndpoints(e =>
             {
-                endpoints.MapControllers();
+                e.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+                e.MapRazorPages();
             });
         }
     }
