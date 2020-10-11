@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using remote_device_dal.Maps;
-using remote_device_services.Models;
+using remote_device_data.Models;
 using System;
 using System.Linq;
 

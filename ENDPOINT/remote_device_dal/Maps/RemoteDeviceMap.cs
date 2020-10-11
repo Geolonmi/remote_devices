@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using remote_device_services.Models;
+using remote_device_data.Models;
 
 namespace remote_device_dal.Maps
 {

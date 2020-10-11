@@ -1,4 +1,4 @@
-﻿namespace remote_device_services.Models
+﻿namespace remote_device_data.Models
 {
     public abstract class RemoteDevice : BaseEntity
     {

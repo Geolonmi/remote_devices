@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\remote_device_services\remote_device_services.csproj" />
+    <ProjectReference Include="..\remote_device_data\remote_device_data.csproj" />
   </ItemGroup>
 
 </Project>
